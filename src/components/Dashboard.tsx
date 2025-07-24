@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { DollarSign, TrendingUp, Target, ShoppingCart, ChefHat, Zap } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { getProfileByUserId } from '@/api/userProfiles';
 import { getRecommendedRecipes } from '@/api/recipes';
 import { getTopFoodsByUserId } from '@/api/nutritionProfiles';
@@ -13,6 +14,7 @@ interface DashboardProps {
 }
 
 export function Dashboard({ currentUser, onOpenProfile }: DashboardProps) {
+  const navigate = useNavigate();
   const profile = getProfileByUserId(currentUser?.id);
   const recommendedRecipes = getRecommendedRecipes(currentUser?.id).slice(0, 3);
   const topFoods = getTopFoodsByUserId(currentUser?.id, 4);
@@ -140,15 +142,27 @@ export function Dashboard({ currentUser, onOpenProfile }: DashboardProps) {
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Button variant="outline" className="h-16 flex-col">
+            <Button 
+              variant="outline" 
+              className="h-16 flex-col"
+              onClick={() => navigate('/shopping')}
+            >
               <ShoppingCart className="w-5 h-5 mb-2" />
               Add Receipt
             </Button>
-            <Button variant="outline" className="h-16 flex-col">
+            <Button 
+              variant="outline" 
+              className="h-16 flex-col"
+              onClick={() => navigate('/recipes')}
+            >
               <ChefHat className="w-5 h-5 mb-2" />
               Find Recipe
             </Button>
-            <Button variant="outline" className="h-16 flex-col">
+            <Button 
+              variant="outline" 
+              className="h-16 flex-col"
+              onClick={() => navigate('/price-tracker')}
+            >
               <TrendingUp className="w-5 h-5 mb-2" />
               Price Trends
             </Button>
