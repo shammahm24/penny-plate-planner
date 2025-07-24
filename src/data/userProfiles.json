@@ -1,0 +1,24 @@
+[
+  {
+    "user_id": "u1",
+    "food_budget": 400,
+    "budget_frequency": "monthly",
+    "dietary_preferences": ["vegetarian", "low-sodium"],
+    "nutrition_goals": "weight_loss",
+    "current_weight": 165,
+    "activity_level": "moderate",
+    "height_cm": 170,
+    "preferred_stores": ["Whole Foods", "Trader Joe's"]
+  },
+  {
+    "user_id": "u2",
+    "food_budget": 100,
+    "budget_frequency": "weekly",
+    "dietary_preferences": ["gluten-free", "organic"],
+    "nutrition_goals": "muscle_gain",
+    "current_weight": 140,
+    "activity_level": "high",
+    "height_cm": 165,
+    "preferred_stores": ["Walmart", "Target"]
+  }
+]

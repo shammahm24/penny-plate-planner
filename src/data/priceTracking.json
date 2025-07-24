@@ -1,0 +1,20 @@
+[
+  {
+    "item_name": "Quinoa",
+    "price_history": [
+      {"store": "Whole Foods", "price": 6.99, "date": "2025-01-15"},
+      {"store": "Trader Joe's", "price": 4.49, "date": "2025-01-15"},
+      {"store": "Walmart", "price": 5.99, "date": "2025-01-15"}
+    ],
+    "recommended_substitute": "Brown rice (30% cheaper, similar nutrition)"
+  },
+  {
+    "item_name": "Avocados",
+    "price_history": [
+      {"store": "Whole Foods", "price": 2.50, "date": "2025-01-15"},
+      {"store": "Trader Joe's", "price": 1.99, "date": "2025-01-15"},
+      {"store": "Walmart", "price": 1.89, "date": "2025-01-15"}
+    ],
+    "recommended_substitute": "Olive oil (lower cost per serving)"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "user_id": "u1",
+    "food_name": "Quinoa",
+    "nutrition_score": 95,
+    "rank": 1,
+    "category": "Grains",
+    "monthly_spend": 24.50
+  },
+  {
+    "user_id": "u1", 
+    "food_name": "Sweet Potatoes",
+    "nutrition_score": 92,
+    "rank": 2,
+    "category": "Vegetables",
+    "monthly_spend": 18.00
+  },
+  {
+    "user_id": "u1",
+    "food_name": "Black Beans",
+    "nutrition_score": 88,
+    "rank": 3,
+    "category": "Proteins",
+    "monthly_spend": 12.75
+  },
+  {
+    "user_id": "u1",
+    "food_name": "Avocados",
+    "nutrition_score": 86,
+    "rank": 4,
+    "category": "Healthy Fats",
+    "monthly_spend": 32.00
+  }
+]

@@ -1,42 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Bread and Butter Design System - Fresh, food-focused nutrition and budget app */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* App-specific color palette */
+    --background: 48 50% 99%; /* #FDFCFB - Clean background */
+    --foreground: 216 12% 16%; /* Dark text for readability */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 43 60% 95%; /* #FAF3E0 - Warm card background */
+    --card-foreground: 216 12% 16%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 43 60% 95%;
+    --popover-foreground: 216 12% 16%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary green theme - fresh, healthy vibes */
+    --primary: 122 39% 49%; /* #4CAF50 - Primary green */
+    --primary-foreground: 0 0% 100%; /* White text */
+    --primary-hover: 122 45% 35%; /* #388E3C - Darker green for hover */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary and accent colors */
+    --secondary: 43 60% 95%; /* Warm beige for cards */
+    --secondary-foreground: 216 12% 16%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 43 30% 85%;
+    --muted-foreground: 216 12% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 122 25% 85%; /* Light green accent */
+    --accent-foreground: 122 39% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 43 20% 85%;
+    --input: 43 20% 90%;
+    --ring: 122 39% 49%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom gradients for headers and CTAs */
+    --gradient-primary: linear-gradient(135deg, hsl(122 39% 49%), hsl(122 35% 65%)); /* #4CAF50 → #66BB6A */
+    --gradient-subtle: linear-gradient(180deg, hsl(48 50% 99%), hsl(43 60% 97%));
+    
+    /* Shadows for depth */
+    --shadow-soft: 0 2px 8px hsl(122 39% 49% / 0.1);
+    --shadow-card: 0 4px 12px hsl(122 39% 49% / 0.08);
+    
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +115,39 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter antialiased;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+@layer components {
+  /* Custom component styles using design system */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  /* Nutrition app specific utility classes */
+  .nutrition-card {
+    @apply bg-card border border-border rounded-lg p-6 shadow-card transition-smooth;
+  }
+  
+  .budget-overview {
+    @apply bg-accent/20 border border-accent rounded-lg p-4;
   }
 }
