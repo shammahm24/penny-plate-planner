@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 48 50% 99%; /* #FDFCFB */
+  --foreground: 216 12% 16%;
+  --card: 43 60% 95%; /* #FAF3E0 */
+  --card-foreground: 216 12% 16%;
+  --popover: 43 60% 95%;
+  --popover-foreground: 216 12% 16%;
+  --primary: 122 39% 49%; /* #4CAF50 */
+  --primary-foreground: 0 0% 100%;
+  --primary-hover: 122 45% 35%; /* #388E3C */
+  --secondary: 122 39% 85%;
+  --secondary-foreground: 216 12% 16%;
+  --muted: 43 20% 85%;
+  --muted-foreground: 216 12% 16%;
+  --accent: 43 20% 85%;
+  --accent-foreground: 216 12% 16%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 43 20% 85%;
+  --input: 43 20% 85%;
+  --ring: 122 39% 49%;
+  --sidebar: 43 60% 95%;
+  --sidebar-foreground: 216 12% 16%;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+.gradient-primary {
+  background: linear-gradient(90deg, #4CAF50 0%, #66BB6A 100%);
+}
+
+.card-bg {
+  background: hsl(var(--card));
+}
